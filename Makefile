@@ -12,5 +12,5 @@ coverageconfig:
 instrument: coverageconfig
 	mono ./tools/SharpCover/SharpCover.exe instrument ./coverageConfig.json
 
-coverage: compile instrument
+coverage: instrument
 	mono ./tools/SharpCover/SharpCover.exe check

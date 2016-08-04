@@ -6,6 +6,5 @@ script:
 after_script:
   - nuget install NUnit.Runners -Version 3.4.1 -OutputDirectory tools
   - mono ./tools/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./Orion.Tests/bin/Release/Orion.Tests.dll
-after_success:
   - make coverage
   - bash <(curl -s https://codecov.io/bash)
