@@ -1,5 +1,6 @@
 language: csharp
 solution: Orion.sln
+sudo: required
 script:
   - make compile test
 after_script:
