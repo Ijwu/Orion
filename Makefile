@@ -12,7 +12,7 @@ test:
 	mono ./tools/NUnit.Console.3.4.1/tools/nunit3-console.exe ./Orion.Tests/bin/Release/Orion.Tests.dll
 
 coverageconfig:
-	./tools/ContinuousIntegration/Build/generateCoverageConfig.sh > ./coverageConfig.json
+	sudo ./tools/ContinuousIntegration/Build/generateCoverageConfig.sh > ./coverageConfig.json
 
 instrument: coverageconfig
 	mono ./tools/SharpCover/SharpCover.exe instrument ./coverageConfig.json
