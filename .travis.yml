@@ -1,6 +1,8 @@
 language: csharp
 solution: Orion.sln
 sudo: required
+install:
+  - chmod a+x ./tools/ContinuousIntegration/Build/generateCoverageConfig.sh
 script:
   - make compile
 after_script:
